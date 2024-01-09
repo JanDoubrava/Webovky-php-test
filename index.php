@@ -1,4 +1,8 @@
 <?php
+/*
+JAN DOUBRAVA
+ADAM HOŘEJŠÍ
+*/ 
 class Znamky {
     public $vlastni_znamka;
     public $datum_znamky;
