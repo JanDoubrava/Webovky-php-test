@@ -30,7 +30,6 @@ class Zak {
         $this->prijmeni = $prijmeni;
     }
 }
-
 class Export {
     public $znamky;
 
@@ -40,12 +39,13 @@ class Export {
 
     function export_csv() {
         $file = fopen("znamky.csv", "w");
-        fputcsv($file, array('Kód zaka', 'Datum znamky', 'Vlastni znamka'));
+        fputcsv($file, array('login', 'zkratka_predmetu', 'znamka'));
 
         foreach ($this->znamky as $znamka) {
-            fputcsv($file, array($znamka->kod_zaka, $znamka->datum_znamky, $znamka->vlastni_znamka));
+            fputcsv($file, array($znamka->kod_zaka, $znamka->zkratka_predmetu, $znamka->vlastni_znamka));
         }
 
         fclose($file);
     }
 }
+
