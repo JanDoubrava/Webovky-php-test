@@ -39,7 +39,7 @@ class Export {
 
     function export_csv() {
         $file = fopen("znamky.csv", "w");
-        fputcsv($file, array('login', 'zkratka_predmetu', 'znamka'));
+        fputcsv($file, array('login_zaka', 'zkratka_predmetu', 'vlastni_znamka'));
 
         foreach ($this->znamky as $znamka) {
             fputcsv($file, array($znamka->kod_zaka, $znamka->zkratka_predmetu, $znamka->vlastni_znamka));
